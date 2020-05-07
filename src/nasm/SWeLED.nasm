@@ -21,25 +21,16 @@ andw (%A), %D, %D
 leaw $21184,%A
 orw %D,(%A), (%A) ;SW 9 Feito
 
-leaw $8, %A
+leaw $12, %A
 movw %A, %D
 leaw $21185, %A 
 andw (%A), %D, %D
 notw %D
-leaw $65527, %A
+leaw $65523, %A
 subw %D, %A, %D
 leaw $21184,%A
-orw %D,(%A), (%A) ;SW 3 Feito
+orw %D,(%A), (%A) ;SW 2 e 3 Feito
 
-leaw $4, %A
-movw %A, %D
-leaw $21185, %A 
-andw (%A), %D, %D
-notw %D
-leaw $65531, %A
-subw %D, %A, %D
-leaw $21184,%A
-orw %D,(%A), (%A) ;SW 2 Feito
 
 
 
