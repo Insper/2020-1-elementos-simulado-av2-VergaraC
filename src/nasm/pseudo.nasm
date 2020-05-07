@@ -23,8 +23,13 @@ movw (%A),%D
 decw %D
 decw %D
 leaw $END,%A
-jg
+jle
 nop
+
+leaw $1, %A
+movw %A, %D
+leaw $5, %A
+movw %D, (%A)
 
 END:
     leaw $6,%A
