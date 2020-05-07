@@ -16,14 +16,14 @@ leaw $1,%A
 movw (%A),%D
 decw %D
 leaw $END,%A
-jne
+jne %D
 nop
 leaw $2, %A
 movw (%A),%D
 decw %D
 decw %D
 leaw $END,%A
-jle
+jle %D
 nop
 
 leaw $1, %A
