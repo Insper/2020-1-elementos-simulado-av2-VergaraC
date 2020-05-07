@@ -32,5 +32,8 @@ leaw $5, %A
 movw %D, (%A)
 
 END:
+    leaw $2, %A
+    negw %A
+    movw %A, %D
     leaw $6,%A
-    movw (%A),%D
+    movw %D,(%A)
