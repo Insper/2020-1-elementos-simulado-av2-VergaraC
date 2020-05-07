@@ -25,18 +25,26 @@ movw %D, $proxRAM
 leaw $0, $contador_valor
 
 Loop:
+    
+    leaw $proxRAM, %A ; N sei como manda pro valor dentro do proxRAM
+    movw (%A), %D 
+    movw %D, %A ;Valor do ProxRam no A
+
+    ;leaw $3, %A
+    ;subw %D %A, %A ;Criando o Contador valor apartir do ProxRam
+
     leaw $contador_valor, %A
     movw (%A),%D
-    leaw $proxRAM, %A ; N sei como manda pro valor dentro do proxRAM
-    movw %D, %A
 
+    movw %D, (%A) ;Quero mover o valor do contador_valor para o valor do proxRAM
 
     leaw $contador_valor, %A
     movw (%A), %D
     incw %D
     leaw $contador_n, %A
-    leaw $END, %A
     subw %D, (%A), %D
+    movw %D, (%A) ;ja diminuindo o  contador_n
+    leaw $END, %A
     je %D
     nop
     ;Fazendo os +1 necessarios
