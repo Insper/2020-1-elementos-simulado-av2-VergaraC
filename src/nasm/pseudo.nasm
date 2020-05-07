@@ -9,8 +9,6 @@
 ;
 ;---------------------------------------------------------
 
-;Pra RAM 1 fazer -1 e se jne 
-;Pra RAM 2 fazer -2 e se jg 
 
 leaw $1,%A
 movw (%A),%D
